@@ -3,9 +3,6 @@
 
 ## 1. Currently, the biggest problem is our client.js file and its location
 
-	- When dealing with the tests, I like to go as far back as possible, and find the first failure -- since it is typically the most relevant
-	- if it is not the most relevant, find what is most relevant and start from there
-	- In this situation, the first test failure happens to be the most relevant -- it may not always be the case but typically is
 	
 ## The error
 
@@ -33,6 +30,12 @@ ENOENT: no such file or directory, open '/Users/marcosandrade/PRIME/coaching/Wee
 ```
 
 - The path for the file will be different for you (the home or user directory), however, the error should still be the same.
+
+## Notes on Tests
+
+- When dealing with the tests, I like to go as far back as possible, and find the first failure -- since it is typically the most relevant
+- if it is not the most relevant, find what is most relevant and start from there
+- In this situation, the first test failure happens to be the most relevant -- it may not always be the case but typically is
 
 ### Action Item
 
@@ -68,7 +71,7 @@ big idea to small details, in a way that you can try to emulate for yourself.
 	
 		- A typical POST request looks like this:
 	
-	```
+```
 	axios({
         method:"POST",
         url:"/calculations",
@@ -77,20 +80,19 @@ big idea to small details, in a way that you can try to emulate for yourself.
         getCalculationsArray();
     })
 }
+```
+	
+	
+3. What are the different moving parts of the equation, and how do those look?
+	
+- There are a lot of different moving parts of a request which can be investigated in detail, however, the most important moving parts at this point are:
 
-	```
-	
-	
-	3. What are the different moving parts of the equation, and how do those look?
-	
-		- There are a lot of different moving parts of a request which can be investigated in detail, however, the most important moving parts at this point are:
-
-			url property: tells the request where to go, and is of type string
-			data property: is that data that is being transported or 'posted,' this data is typically an Javascript Object
+	- url property: tells the request where to go, and is of type string
+    - data property: is that data that is being transported or 'posted,' this data is typically an Javascript Object
 			
 			
-	4. When you eventually encounter a problem,
-	refer back to these steps, typically number 3, and find what is misbehaving in that structure. 
+4. (debugging) When you eventually encounter a problem
+	- refer back to these steps, typically number 3, and find what is misbehaving in that structure. 
 			
 ### Bottom Line
 
